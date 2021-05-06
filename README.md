@@ -1,5 +1,6 @@
 # Loops
 
+### Introduction
 * **You are learning programming fundamentals, not just Javascript**
 * Control flow constructs exist in all industry-standard programming languages
 * Ability to do something repeatedly is very useful
@@ -8,13 +9,15 @@
   * **Count**-controlled loops (for loop)
   * **Collection**-controlled loops (for / of, for / of)
 
-## While Loops
+---
+
+# While Loops
 
 * Loop construct that executes depending on a boolean value
 * Repeats until the expression test evaluates to false
 * Initializes a counter, tests an expression, executes a statement, increments, repeats
 
-structure
+### Structure
 ```
 initialize
 while(test){
@@ -22,7 +25,7 @@ while(test){
 	increment
 }
 ```
-example
+### Example
 ```
 let x = 0
 while (x < 10){
@@ -31,7 +34,7 @@ while (x < 10){
 }
 // 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 ```
-infinite loop
+### Infinite loop
 ```
 let x = 0
 while (x < 10){
@@ -40,32 +43,33 @@ while (x < 10){
 // 0 forever
 // ctrl-C to kill process
 ```
-
-## For Loop
+---
+# For Loop
 
 * Loops that depend on a count condition
 * More convenient than the while loop
-* Does the same process of initialize, test, execute and increment
+* Does the same process as a while loop: initialize, test, execute and increment
+
+### Structure
 ```
 for (initialize; test; increment){
 	statement
 }
 ```
-
+### Example
 ```
 for (i = 0; i < 10; i++){
 	console.log(i)
 // 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 ```
-## Playing with Loops
-Multiple variables
+### Multiple variables
 ```
 for (i = 0, j = 0; i<10 && j<10; i++, j++){
 	console.log(i + j)
 }
 0, 2, 4, 6, 8, 10, 12, 14, 16, 18
 ```
-Accessing array elements with a for loop
+### Accessing array elements using a for loop
 ```
 const instructors = ["anna", "nick", "weston"]
 for (i = 0; i<instructors.length; i++){
@@ -76,7 +80,7 @@ for (i = 0; i<instructors.length; i++){
 // weston
 
 ```
-Combining `i` and `instructors[i]`
+### Combining pointer value and array access
 ```
 const instructors = ["anna", "nick", "weston"]
 for (i = 0; i<instructors.length; i++){
@@ -84,7 +88,7 @@ for (i = 0; i<instructors.length; i++){
 }
 // array index 0: anna, array index 1: nick, array index 2: weston
 ```
-Combining `for` and `while` loops to move the pointer at different rates
+### Combining `for` and `while` loops to move the pointer at different rates
 ```
 const numbers = [1,1,1,2,2,3,3,1]
 for (i = 1; i<x.length; i++){
@@ -95,12 +99,12 @@ for (i = 1; i<x.length; i++){
 }
 // 1, 2, 3, 1
 ```
+---
+# For / of loop
 
-## For / of loop
+* Loop based on iterable objects. Examples of iterable objects are arrays and strings.
 
-Loop based on iterable objects. Examples of iterable objects are arrays and strings.
-
-Iterating over array
+### Iterating over array
 ```
 const instructors = ["anna", "nick", "weston"]
 for (let name of instructors){
@@ -109,7 +113,7 @@ for (let name of instructors){
 // anna, nick, weston
 ```
 
-Iterating over string
+### Iterating over string
 ```
 const name = "nick"
 for (let letter of name){
@@ -117,7 +121,7 @@ for (let letter of name){
 }
 // n, i, c, k
 ```
-Objects are not iterable
+### Objects are not iterable
 ```
 const team = {
 	lead: "anna",
@@ -131,9 +135,9 @@ for (let member of team){
 // TypeError: team is not iterable
 ```
 
-## Turning Object data into Arrays for use with `for / of`
+### Turning Object data into Arrays for use with `for / of`
 
-`Object.keys()`
+### `Object.keys()`
 ```
 const team = {
 	lead: "anna",
@@ -146,7 +150,7 @@ for (let member of Object.keys(team)){
 }
 // lead, IA1, IA2
 ```
-`Object.values()`
+### `Object.values()`
 ```
 const team = {
 	lead: "anna",
@@ -159,7 +163,7 @@ for (let member of Object.values(team)){
 }
 // anna, weston, nick
 ```
-`Object.entries()`
+### `Object.entries()`
 ```
 const team = {
 	lead: "anna",
@@ -180,11 +184,11 @@ for (let member of Object.entries(team)){
 ```
 
 
-## For / in loop
+# For / in loop
 
-Works with any object, not just iterable objects. Loops through property names.
+* Works with any object, not just iterable objects. Loops through object property names.
 
-Loops through property names
+### Loops through property names
 ```
 const team = {
 	lead: "anna",
@@ -197,7 +201,7 @@ for (let role in team){
 }
 // lead, IA1, IA2
 ```
-Demonstrates that in an array, the index of the array elements are the property names
+### Demonstrates that in an array, the index of the array elements are the property names
 ```
 let instructors = ["anna", "weston", "nick"]
 
