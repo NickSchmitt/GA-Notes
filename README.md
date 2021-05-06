@@ -34,6 +34,17 @@ while (x < 10){
 }
 // 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 ```
+### Counting to 1 billion
+```
+console.time('example')
+let x = 0
+while (x < 1_000_000_000){
+	x++
+}
+console.timeEnd('example')
+// computer: 0.8 seconds
+// me: 31 years
+```
 ### Infinite loop
 ```
 let x = 0
@@ -210,5 +221,3 @@ for (let name in instructors){
 }
 // 0, 1, 2
 ```
-
-
