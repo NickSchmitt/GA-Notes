@@ -132,7 +132,7 @@ for (let letter of name){
 }
 // n, i, c, k
 ```
-### Objects are not iterable
+### Not all objects are not iterable
 ```
 const team = {
 	lead: "anna",
