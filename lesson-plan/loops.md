@@ -1,7 +1,5 @@
 # Loops
 
-* **You are learning programming fundamentals, not just Javascript**
-* Control flow constructs exist in all industry-standard programming languages
 * Ability to do something repeatedly is very useful
 * There are three kinds of loops that matter to us:
   * **Condition**-controlled loops (while loop)
@@ -11,7 +9,7 @@
 ## While Loops
 
 * Loop construct that executes depending on a boolean value
-* Repeats until the expression test evaluates to false
+* Will repeat until the expression is falsy
 * Initializes a counter, tests an expression, executes a statement, increments, repeats
 
 structure
@@ -57,6 +55,7 @@ for (i = 0; i < 10; i++){
 	console.log(i)
 // 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 ```
+
 ## Playing with Loops
 Multiple variables
 ```
