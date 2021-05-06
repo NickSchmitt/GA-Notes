@@ -1,5 +1,7 @@
 # Loops
 
+* **You are learning programming fundamentals, not just Javascript**
+* Control flow constructs exist in all industry-standard programming languages
 * Ability to do something repeatedly is very useful
 * There are three kinds of loops that matter to us:
   * **Condition**-controlled loops (while loop)
@@ -55,41 +57,6 @@ for (i = 0; i < 10; i++){
 	console.log(i)
 // 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 ```
-
-## Fizz Buzz
-Implement Fizz Buzz. Loop from 1 to 100. If the number is divible by both 3 and 5, print "fizzbuzz". Otherwise, if the number if divisible by 3, print "fizz", or, if the number is divisible by 5, print "buzz". If none of the above are true, print the number. This is a very common interview question!
-
-## Fizz Buzz While Loop
-
-```
-let i = 1
-while (i <= 100){
-	if (i % 15 == 0){
-		console.log("fizzbuzz")
-	} else if (i % 3 == 0){
-		console.log("fizz")
-	} else if (i % 5 == 0){
-		console.log("buzz")
-	} else {
-		console.log(i)
-	}
-}
-```
-## Fizz Buzz For Loop
-```
-for (let i = 1; i <= 100; i++){
-	if (i % 3 == 0 && i % 5 == 0){
-		console.log("fizzbuzz")
-	} else if (i % 3 == 0){
-		console.log("fizz")
-	} else if (i % 5 == 0){
-		console.log("buzz")
-	} else {
-		console.log(i)
-	}
-}
-```
-
 ## Playing with Loops
 Multiple variables
 ```
