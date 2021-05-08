@@ -212,7 +212,20 @@ for (let role in team){
 }
 // lead, IA1, IA2
 ```
-### Demonstrates that in an array, the index of the array elements are the property names
+### Access values using bracket notation
+```
+const team = {
+	lead: "anna",
+	IA1: "weston",
+	IA2: "nick"
+}
+
+for (let role in team){
+	console.log(team[role])
+}
+// anna, weston, nick
+```
+### The array indexes are property names
 ```
 let instructors = ["anna", "weston", "nick"]
 
