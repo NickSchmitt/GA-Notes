@@ -63,13 +63,13 @@ let addTen = (num) => {
 
 let addTen = num => return num + 10
 
-//Arrow functions don't need `return` if there's only one statement and it's a `return` statement
+// Arrow functions don't need `return` if there's only one statement and it's a `return` statement
 
 let addTen = num => console.log(num+10)
 let addTen = num => num+10
 ```
 ---
-## Arrow functions give us a clean way to pass functions to other functions
+### Arrow functions give us a clean way to pass functions to other functions
 ```
 arr.map(function addTen(num){
 	return num+10
@@ -83,7 +83,7 @@ arr.map(num => num+10)
 * Executes a function it recieves on each array element
 * No return value, just executes function
 
-#### forEach Basic example
+### forEach Basic example
 * For each name in the array, print a string with the name interpolated into it.
 ```
 let arr = ["Nick", "Anna", "Weston"]
@@ -105,14 +105,6 @@ arr.forEach(person => {
 	h1.innerText = person
 	body.appendChild(h1)
 })
-```
-### Loop Version
-```
-for(let person of arr){
-	let h1 = document.createElement("h1")
-	h1.innerText = person
-	body.appendChild(h1)
-}
 ```
 ---
 ## `map()`
@@ -165,6 +157,7 @@ for(const person of employees){
 * Returns a new array of only the elements that passed the test.
 
 ### filter Basic Example
+* Return a new array of any name shorter than 5 characters long.
 ```
 const names = ["Nick", "Anna", "Weston"]
 let shortNames = arr.filter(name => name.length < 5)
@@ -177,6 +170,7 @@ for(let name of names){
 }
 ```
 ### filter Data Example
+* Return a new array of any employee objects with a location property of "Los Angeles".
 ```
 let losAngelesEmployees = employees.filter(x => x.location === "Los Angeles")
 
