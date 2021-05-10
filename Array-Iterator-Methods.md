@@ -27,7 +27,7 @@
   * Return a new array (map, filter)
   * Return a single value (reduce)
 
-Question: how does the above process turn into this:
+Question: how do we achieve the above pattern with the following syntax?
 ```
 arr.forEach(num => console.log(num*10))
 
