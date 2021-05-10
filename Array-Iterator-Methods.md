@@ -3,32 +3,31 @@
 ### Array Methods
 * Javascript gives us 32 functions to operate on arrays. These functions are called array methods.
 * Popular examples:
-  * `arr.push("hello")`
-  * `arr.slice(0, 2)`
-  * `arr.sort()`
-  * `arr.join("")`
-* Some of the most powerful methods are **iterator** methods. The most common are:
-  * `arr.forEach()`
-  * `arr.map()`
-  * `arr.filter()`
-  * `arr.reduce()`
+  * `push("hello")`
+  * `slice(0, 2)`
+  * `sort()`
+  * `join("")`
+* Some of the most powerful methods are **iterator** methods.
+* Some examples:
+  * `forEach(num => console.log(num * 10))`
+  * `map(num => num * 10)`
+  * `filter(num => num !== 10)`
+  * `reduce((sum, num) => sum + num)`
 
 ---
 ## Array Iterator Methods
 
 * Iterator method pattern:
-  * Takes a function you give specify.
-  * Loops over an array.
-  * Calls your function on each array element.
+  1. Array method takes a function you give it.
+  2. Loops over an array.
+  3. Calls your function on each array element.
 
 * Some iterator methods:
   * Return nothing (forEach)
   * Return a new array (map, filter)
   * Return a single value (reduce)
 
-
-### Examples
-
+Question: how does the above process turn into this:
 ```
 arr.forEach(num => console.log(num*10))
 
@@ -38,9 +37,6 @@ arr.filter(num => num !== 10)
 
 arr.reduce((sum, num) => sum + num)
 ```
-
-*  How does the above syntax work?
-
 ---
 
 ## Functions Recap
@@ -135,7 +131,7 @@ for(const name of arr){
 	greetingArr.push(`Hello, ${name}`)
 }
 ```
-### Data Example
+### map Data Example
 * Return an array of employee locations
 ```
 let employees = [
@@ -168,7 +164,7 @@ for(const person of employees){
 * Tests each element, "filters out" false elements, keeps true elements.
 * Returns a new array of only the elements that passed the test.
 
-### Filter Basic Example
+### filter Basic Example
 ```
 const names = ["Nick", "Anna", "Weston"]
 let shortNames = arr.filter(name => name.length < 5)
@@ -180,7 +176,7 @@ for(let name of names){
 	}
 }
 ```
-### Filter Data Example
+### filter Data Example
 ```
 let losAngelesEmployees = employees.filter(x => x.location === "Los Angeles")
 
@@ -196,7 +192,7 @@ for (let employee of employees){
 * "Reduces" the whole array to a single value
 * Starts with an initial value that changes with each array element
 
-### Reduce Basic Example
+### reduce Basic Example
 * Add all elements of an array together
 ```
 const nums = [1, 2, 3]
@@ -208,7 +204,7 @@ for(let num of nums){
 	sum = sum + num
 }
 ```
-### Reduce Data Example
+### reduce Data Example
 * Take an array of employees and create an object that counts how many employees of each role there are.
 ```
 // Initial Array of employee data
