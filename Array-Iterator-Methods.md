@@ -1,4 +1,4 @@
-# Iterator Array Methods
+# Array Iterator Methods
 
 ### Array Methods
 * Javascript gives us 32 functions to operate on arrays. These functions are called array methods.
