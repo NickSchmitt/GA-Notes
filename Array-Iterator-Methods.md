@@ -49,7 +49,7 @@ function addTen(num){
 ```
 Function Expression
 ```
-function(num){
+let addTen = function(num){
 	return num + 10
 }
 ```
