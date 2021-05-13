@@ -1,4 +1,6 @@
 # Git Fork Workflow
+### Overview
+1. [Diagram from Git book](#overview)
 
 ### Setup:
 1. [Git Manager creates repo on Github](#1-git-manager-creates-main-repository-on-github)
@@ -17,6 +19,10 @@
 5.  [Push topic to remote origin topic](#10-push-topic-to-remote-origin-topic)
 6.  [Submit pull request from topic to upstream](#11-submit-pull-request-from-topic-to-upstream)
 7.  [Git Manager merges pull request into main repository]()
+---
+## Overview
+![](fork-workflow-annotated.png)
+
 ---
 ## Setup
 
