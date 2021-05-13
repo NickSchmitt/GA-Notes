@@ -1,4 +1,4 @@
-# Iterator Array Methods
+# Array Iterator Methods
 
 ### Array Methods
 * Javascript gives us 32 functions to operate on arrays. These functions are called array methods.
@@ -49,7 +49,7 @@ function addTen(num){
 ```
 Function Expression
 ```
-function(num){
+let addTen = function(num){
 	return num + 10
 }
 ```
@@ -119,6 +119,7 @@ let arr = ["Nick", "Anna", "Weston"]
 let greetingArr = arr.map(name => `Hello, ${name}`)
 
 // same as
+let greetingArr = []
 for(const name of arr){
 	greetingArr.push(`Hello, ${name}`)
 }
@@ -147,6 +148,7 @@ let employees = [
 let cities = employees.map(x => x.location)
 
 // same as:
+let cities = []
 for(const person of employees){
 	cities.push(employees.location)
 }
@@ -163,6 +165,7 @@ const names = ["Nick", "Anna", "Weston"]
 let shortNames = arr.filter(name => name.length < 5)
 
 // same as:
+let shortNames = []
 for(let name of names){
 	if(name.length < 5){
 		shortNames.push(name)
@@ -175,6 +178,7 @@ for(let name of names){
 let losAngelesEmployees = employees.filter(x => x.location === "Los Angeles")
 
 // same as:
+let losAngelesEmployees = []
 for (let employee of employees){
 	if (employee.location === "Los Angeles"){
 		losAngelesEmployees.push(employee)
@@ -189,8 +193,8 @@ for (let employee of employees){
 ### reduce Basic Example
 * Add all elements of an array together
 ```
-const nums = [1, 2, 3]
-const sum = nums.reduce((sum, num) => sum + num, 0)
+let nums = [1, 2, 3]
+let sum = nums.reduce((sum, num) => sum + num, 0)
 
 // same as
 let sum = 0
